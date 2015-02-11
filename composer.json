@@ -1,11 +1,8 @@
 {
   "name": "saada/yii2-factory-muffin",
   "description": "A Yii2 wrapper for league/factory-muffin with Gii generators.",
-  "keywords": [
-    "testing",
-    "factory",
-    "yii2"
-  ],
+  "keywords": ["testing", "factory", "yii2"],
+  "homepage": "http://moody.website/yii2-factory-muffin/",
   "require": {
     "php": ">=5.4.0",
     "league/factory-muffin": "3.0.*@dev"
