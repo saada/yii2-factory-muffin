@@ -1,0 +1,25 @@
+{
+  "name": "saada/yii2-factory-muffin",
+  "description": "A Yii2 wrapper for league/factory-muffin with Gii generators.",
+  "keywords": [
+    "testing",
+    "factory",
+    "yii2"
+  ],
+  "require": {
+    "php": ">=5.4.0",
+    "league/factory-muffin": "3.0.*@dev"
+  },
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Mahmoud Saada",
+      "email": "mahmoudsaada@gmail.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "yii\\FactoryMuffin\\": ""
+    }
+  }
+}
