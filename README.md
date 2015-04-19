@@ -1,6 +1,9 @@
 # Yii2 Extension for [Factory Muffin](https://github.com/thephpleague/factory-muffin)
 
-If you've used FactoryGirl or FactoryMuffin before, this is my wrapper around FactoryMuffin for the Yii2 framework.
+I found fixtures really tiring and cumbersome to maintain with Yii2 models. So, I decided to write this extension
+that basically wraps FactoryMuffin and attaches factory definitions to any model that you want to seed in the database.
+I found it extremely helpful for seeding databases dynamically which is especially useful when writing tests.
+If you've used FactoryGirl or FactoryMuffin before, this is the same concept tailored for the Yii2 framework.
 I tried to keep things as tidy as possible. Contributions are more than welcome!
 
 ## Installing
