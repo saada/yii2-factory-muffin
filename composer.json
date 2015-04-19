@@ -12,9 +12,11 @@
   ],
   "require": {
     "php": ">=5.5.0",
+  },
+  "require-dev": {
     "league/factory-muffin": "3.0.*@dev",
     "league/factory-muffin-faker": "1.0.*@dev"
-  },
+  }
   "autoload": {
     "psr-4": {
       "saada\\FactoryMuffin\\": ""
