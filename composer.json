@@ -12,8 +12,8 @@
   ],
   "require": {
     "php": ">=5.5.0",
-    "league/factory-muffin": "dev-master",
-    "league/factory-muffin-faker": "dev-master"
+    "league/factory-muffin": "@dev",
+    "league/factory-muffin-faker": "@dev"
   },
   "autoload": {
     "psr-4": {
