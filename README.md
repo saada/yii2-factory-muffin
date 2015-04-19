@@ -7,11 +7,11 @@ I tried to keep things as tidy as possible. Contributions are more than welcome!
 
 [PHP](https://php.net) 5.5+ and [Composer](https://getcomposer.org) are required.
 
-In your composer.json, simply add `"saada/yii2-factory-muffin": "*"` to your `"require"` section:
+In your composer.json, simply add `"saada/yii2-factory-muffin": "dev-master"` to your `"require"` section:
 ```json
 {
     "require": {
-        "saada/yii2-factory-muffin": "*"
+        "saada/yii2-factory-muffin": "dev-master"
     }
 }
 ```
