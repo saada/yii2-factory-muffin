@@ -14,8 +14,8 @@ In your composer.json, simply add `"saada/yii2-factory-muffin": "dev-master"` to
 ```json
 {
     "require": {
-        "saada/yii2-factory-muffin": "dev-master",
-        "league/factory-muffin-faker": "1.0.*@dev"
+        "saada/yii2-factory-muffin": "@dev",
+        "league/factory-muffin-faker": "@dev"
     }
 }
 ```
