@@ -3,10 +3,6 @@
   "description": "A Yii2 wrapper for league/factory-muffin with Gii generators.",
   "keywords": ["testing", "factory", "yii2"],
   "homepage": "http://moody.website/yii2-factory-muffin/",
-  "require": {
-    "php": ">=5.4.0",
-    "league/factory-muffin": "3.0.*@dev"
-  },
   "license": "MIT",
   "authors": [
     {
@@ -14,9 +10,13 @@
       "email": "mahmoudsaada@gmail.com"
     }
   ],
+  "require": {
+    "php": ">=5.5.0",
+    "league/factory-muffin": "3.0.*@dev"
+  },
   "autoload": {
     "psr-4": {
-      "yii\\FactoryMuffin\\": ""
+      "saada\\FactoryMuffin\\": ""
     }
   }
 }
