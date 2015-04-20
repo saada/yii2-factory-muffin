@@ -13,7 +13,7 @@
   "minimum-stability": "dev",
   "require": {
     "php": ">=5.5.0",
-    "league/factory-muffin": "*@dev"
+    "league/factory-muffin": "3.0.0-beta1"
   },
   "autoload": {
     "psr-4": {
