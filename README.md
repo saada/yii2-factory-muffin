@@ -1,4 +1,5 @@
 # Yii2 Extension for [Factory Muffin](https://github.com/thephpleague/factory-muffin)
+[![Total Downloads](https://img.shields.io/packagist/dt/saada/yii2-factory-muffin.svg?style=flat-square)](https://packagist.org/packages/dektrium/yii2-rbac) [![Software License](https://img.shields.io/badge/license-MIT-orange.svg?style=flat-square)](LICENSE)
 
 I found fixtures really tiring and cumbersome to maintain with Yii2 models. So, I decided to write this extension
 that basically wraps FactoryMuffin and attaches factory definitions to any model that you want to seed in the database.
