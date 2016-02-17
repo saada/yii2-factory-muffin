@@ -16,7 +16,7 @@ use League\FactoryMuffin\Exceptions\DeleteMethodNotFoundException;
 use League\FactoryMuffin\Exceptions\DeletingFailedException;
 use League\FactoryMuffin\Exceptions\SaveFailedException;
 use League\FactoryMuffin\Exceptions\SaveMethodNotFoundException;
-use League\FactoryMuffin\ModelStore;
+use League\FactoryMuffin\Stores\ModelStore;
 
 /**
  * This is the model store class.
