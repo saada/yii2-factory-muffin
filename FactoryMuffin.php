@@ -20,10 +20,6 @@ class FactoryMuffin extends \League\FactoryMuffin\FactoryMuffin{
     {
         parent::__construct(new ModelStoreYii());
 
-        // map factory muffin CRUD methods to Yii2's methods
-        $this->setSaveMethod('save')
-            ->setDeleteMethod('delete');
-
         if (!empty($models))
         	$this->loadModelDefinitions($models);
     }
