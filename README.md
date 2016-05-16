@@ -23,20 +23,36 @@ In your composer.json, simply add `"saada/yii2-factory-muffin": "dev-master"` to
 
 ## Example Usage
 
-Let's take the typical example from the FactoryMuffin docs and translate it into Yii2.
 ```php
-$fm->define('Message')->setDefinitions([
-    'user_id'      => 'factory|User',
-    'subject'      => Faker::sentence(),
-    'message'      => Faker::text(),
-    'phone_number' => Faker::randomNumber(8),
-    'created'      => Faker::date('Ymd h:s'),
-    'slug'         => 'Message::makeSlug',
-])->setCallback(function ($object, $saved) {
+<?php
+$fm = new saada\FactoryMuffin\FactoryMuffin();
+$fm->define('models\Message')->setDefinitions([
+    'user_id'      => 'factory|models\User',
+    'subject'      => 'sentence',
+    'message'      => 'text',
+    'phone_number' => 'randomNumber|8',
+    'created'      => 'date|Ymd h:s',
+    'slug'         => 'call|makeSlug|word',
+], function ($object, $saved) {
     // we're taking advantage of the callback functionality here
     $object->message .= '!';
 });
+
+$fm->define('models\User')->setDefinitions([
+    'username' => 'firstNameMale',
+    'email'    => 'email',
+    'avatar'   => 'imageUrl|400;600',
+    'greeting' => RandomGreeting::get(),
+    'four'     => function() {
+        return 2 + 2;
+    },
+]);
 ```
+
+All the `FactoryMuffin` API calls are accessible from the `$fm` instance above.
+
+## Alternative In-Model Pattern (Optional)
+This pattern is a convenience that you DO NOT HAVE TO use in your project. But I found really useful since a lot of our model definitions for tests and fake data are heavily coupled with our application models.
 
 First, we need to implement `FactoryInterface` interfaces to our models.
 
