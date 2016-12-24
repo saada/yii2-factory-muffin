@@ -1,15 +1,13 @@
 <?php
+
 namespace saada\FactoryMuffin;
 
 use League\FactoryMuffin\Exceptions\ModelException;
 use League\FactoryMuffin\Exceptions\ModelNotFoundException;
+use League\FactoryMuffin\FactoryMuffin as LeagueFactoryMuffin;
 
-/**
- * Class FactoryMuffin
- * 
- * @package common\components
- */
-class FactoryMuffin extends \League\FactoryMuffin\FactoryMuffin{
+class FactoryMuffin extends LeagueFactoryMuffin
+{
     /**
      * @param array $models ex: [ Model1::className(), Model2::className() ]
      * @throws ModelException
@@ -20,8 +18,9 @@ class FactoryMuffin extends \League\FactoryMuffin\FactoryMuffin{
     {
         parent::__construct(new ModelStoreYii());
 
-        if (!empty($models))
-        	$this->loadModelDefinitions($models);
+        if (!empty($models)) {
+            $this->loadModelDefinitions($models);
+        }
     }
 
     /**
@@ -32,21 +31,24 @@ class FactoryMuffin extends \League\FactoryMuffin\FactoryMuffin{
     public function loadModelDefinitions($models)
     {
         // load model definitions
-        if (empty($models) || !is_array($models))
+        if (empty($models) || !is_array($models)) {
             throw new ModelNotFoundException(self::class, 'Models should be passed as an array of class names!');
+        }
 
         foreach ($models as $model) {
             /** @var FactoryInterface $model */
-            if (in_array(FactoryInterface::class, class_implements($model))) {
-                $fmModel = $this->define($model);
-                $definitions = $model::definitions();
-                if (!empty($definitions[0]) AND is_array($definitions[0])) {
-                    $fmModel->setDefinitions($definitions[0]);
-                    if (!empty($definitions[1]))
-                        $fmModel->setCallback($definitions[1]);
-                }
-            } else {
+            if (!in_array(FactoryInterface::class, class_implements($model))) {
                 throw new ModelException($model, 'Could not find interface implementation: ' . FactoryInterface::class);
+            }
+
+            $fmModel = $this->define($model);
+            $definitions = $model::definitions();
+
+            if (!empty($definitions[0]) and is_array($definitions[0])) {
+                $fmModel->setDefinitions($definitions[0]);
+                if (!empty($definitions[1])) {
+                    $fmModel->setCallback($definitions[1]);
+                }
             }
         }
     }
