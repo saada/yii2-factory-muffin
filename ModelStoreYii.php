@@ -1,14 +1,6 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: ryan
- * Date: 4/28/15
- * Time: 2:14 PM
- */
 
 namespace saada\FactoryMuffin;
-
-
 
 use Exception;
 use League\FactoryMuffin\Exceptions\DeleteFailedException;
@@ -19,11 +11,7 @@ use League\FactoryMuffin\Exceptions\SaveMethodNotFoundException;
 use League\FactoryMuffin\Stores\ModelStore;
 
 /**
- * This is the model store class.
- *
- * @author Graham Campbell <graham@mineuk.com>
- * @author Scott Robertson <scottymeuk@gmail.com>
- * @author Anderson Ribeiro e Silva <dimrsilva@gmail.com>
+ * This is the Yii model store class.
  */
 class ModelStoreYii extends ModelStore
 {
@@ -91,8 +79,8 @@ class ModelStoreYii extends ModelStore
     public function persist($model)
     {
         if (!$this->save($model)) {
-            if ($model->hasErrors() ) {
-                throw new SaveFailedException(get_class($model), print_r($model->getErrors(), true) );
+            if ($model->hasErrors()) {
+                throw new SaveFailedException(get_class($model), print_r($model->getErrors(), true));
             }
 
             throw new SaveFailedException(get_class($model));
