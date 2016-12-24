@@ -1,5 +1,6 @@
 # Yii2 Extension for [Factory Muffin](https://github.com/thephpleague/factory-muffin)
 
+[![Version](https://img.shields.io/packagist/v/saada/yii2-factory-muffin.svg?style=flat-square)](Version)
 [![Total Downloads](https://img.shields.io/packagist/dt/saada/yii2-factory-muffin.svg?style=flat-square)](https://packagist.org/packages/saada/yii2-factory-muffin) [![Software License](https://img.shields.io/badge/license-MIT-orange.svg?style=flat-square)](LICENSE)
 
 I found fixtures really tiring and cumbersome to maintain with Yii2 models. So, I decided to write this extension
