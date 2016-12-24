@@ -10,10 +10,9 @@
       "email": "mahmoudsaada@gmail.com"
     }
   ],
-  "minimum-stability": "dev",
   "require": {
     "php": ">=5.5.0",
-    "league/factory-muffin": "dev-master"
+    "league/factory-muffin": "~3.0"
   },
   "autoload": {
     "psr-4": {
