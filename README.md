@@ -1,4 +1,5 @@
 # Yii2 Extension for [Factory Muffin](https://github.com/thephpleague/factory-muffin)
+
 [![Total Downloads](https://img.shields.io/packagist/dt/saada/yii2-factory-muffin.svg?style=flat-square)](https://packagist.org/packages/saada/yii2-factory-muffin) [![Software License](https://img.shields.io/badge/license-MIT-orange.svg?style=flat-square)](LICENSE)
 
 I found fixtures really tiring and cumbersome to maintain with Yii2 models. So, I decided to write this extension
@@ -11,12 +12,13 @@ I tried to keep things as tidy as possible. Contributions are more than welcome!
 
 [PHP](https://php.net) 5.5+ and [Composer](https://getcomposer.org) are required.
 
-In your composer.json, simply add `"saada/yii2-factory-muffin": "dev-master"` to your `"require"` section:
+In your composer.json, simply add these packages to your `"require"` section
+
 ```json
 {
     "require": {
-        "saada/yii2-factory-muffin": "@dev",
-        "league/factory-muffin-faker": "@dev"
+        "saada/yii2-factory-muffin": "~2.0",
+        "league/factory-muffin-faker": "~2.0"
     }
 }
 ```
@@ -133,5 +135,6 @@ class MuffinTest extends TestCase {
 ```
 
 ### TODO
+
 - [x] Create wrapper around Factory Muffin 3.0
 - [ ] Create Gii generator to automagically add a generic definitions() implementation to a model
